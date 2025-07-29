@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <span class="logo">ADMISSION</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#programs">PROGRAMS</a></li>
+                <li><a href="#courses">COURSES</a></li>
+                <li><a href="#requirements">REQUIREMENTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#help" class="cart-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9,12 l2,2 4,-4"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Student Admission<br>
+                Application Form
+            </h1>
+            
+            <div class="form-container">
+                <form id="admissionForm" class="admission-form" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth *</label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender *</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="male" required>
+                                <span class="radio-custom"></span>
+                                Male
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="female" required>
+                                <span class="radio-custom"></span>
+                                Female
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="other" required>
+                                <span class="radio-custom"></span>
+                                Other
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="course">Course or Program *</label>
+                            <select id="course" name="course" required>
+                                <option value="">Select a course</option>
+                                <option value="computer-science">Computer Science</option>
+                                <option value="information-technology">Information Technology</option>
+                                <option value="business-administration">Business Administration</option>
+                                <option value="engineering">Engineering</option>
+                                <option value="nursing">Nursing</option>
+                                <option value="education">Education</option>
+                                <option value="psychology">Psychology</option>
+                                <option value="accounting">Accounting</option>
+                                <option value="marketing">Marketing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="yearLevel">Year Level *</label>
+                            <select id="yearLevel" name="yearLevel" required>
+                                <option value="">Select year level</option>
+                                <option value="1st-year">1st Year</option>
+                                <option value="2nd-year">2nd Year</option>
+                                <option value="3rd-year">3rd Year</option>
+                                <option value="4th-year">4th Year</option>
+                                <option value="graduate">Graduate</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number *</label>
+                            <input type="tel" id="contactNumber" name="contactNumber" placeholder="e.g., +63 912 345 6789" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="e.g., student@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="reset" class="btn btn-secondary">CLEAR FORM</button>
+                        <button type="submit" class="btn btn-primary">SUBMIT APPLICATION</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
