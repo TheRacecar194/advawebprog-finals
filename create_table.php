@@ -1,6 +1,6 @@
 <?php
 include 'db_connect.php' //establishes connection to mysql database
-
+//do not include this file if does not work.
 //create students table
 $sql = "CREATE TABLE students(
         id INT AUTO_INCREMENT PRIMARY KEY,
