@@ -13,4 +13,6 @@ $sql = "CREATE TABLE students(
         email VARCHAR(100),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );"
+
+$conn->close(); //close connection
 ?>
