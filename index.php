@@ -1,7 +1,7 @@
 <?php
 include 'db_connect.php'; //establishes connection to mysql database
 //create students table
-$sql = "CREATE TABLE students(
+$sql = "CREATE TABLE IF NOT EXISTS students(
         id INT AUTO_INCREMENT PRIMARY KEY,
         full_name VARCHAR(100),
         dob DATE,
@@ -13,18 +13,25 @@ $sql = "CREATE TABLE students(
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )";
 
+//check if table creation fails
+if ($conn->query($sql) === FALSE) {
+    echo "Error creating table: " . $conn->error;
+}
+
 //set variables to insert to table
-$fullName = $_POST['fullName'] = "";
-$birthDate = $_POST['dateOfBirth'] = "";
-$gender = $_POST['gender'] = "";
-$course = $_POST['course'] = "";
-$yearLevel = $_POST['yearLevel'] = "";
-$contactNumber = $_POST['contactNumber'] = "";
-$email = $_POST['email'] = "";
+$fullName = $_POST['fullName'] ?? "";
+$birthDate = $_POST['dateOfBirth'] ?? "";
+$gender = $_POST['gender'] ?? "";
+$course = $_POST['course'] ?? "";
+$yearLevel = $_POST['yearLevel'] ?? "";
+$contactNumber = $_POST['contactNumber'] ?? "";
+$email = $_POST['email'] ?? "";
 
 
 //insert to students table
-$sql = "INSERT INTO students (full_name, dob, gender, course, year_level, contact_number, email) VALUES ('$fullName', '$birthDate', '$gender', '$course', '$yearLevel', '$contactNumber', $email)";
+$sql = "INSERT INTO students
+(full_name, dob, gender, course, year_level, contact_number, email)
+VALUES ('$fullName', '$birthDate', '$gender', '$course', '$yearLevel', '$contactNumber', '$email')";
 
 if($conn->query($sql) === TRUE){
         // echo "<script language="javascript">";
