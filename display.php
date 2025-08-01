@@ -2,7 +2,7 @@
 include 'db_connect.php'; //establish connection to db
 
 //fetch all student data
-$sql = "SELECT * FROM student";
+$sql = "SELECT * FROM students";
 $result = $conn->query($sql);
 
 //display all data in loop
