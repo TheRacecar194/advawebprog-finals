@@ -42,6 +42,5 @@ if($conn->query($sql) === TRUE){
         echo 'alert("Error. Please try again.")';
         echo '</script>';
 }
-
 $conn->close(); //closes db connection
 ?>
