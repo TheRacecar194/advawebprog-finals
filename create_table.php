@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php' //establishes connection to mysql database
+include 'db_connect.php'; //establishes connection to mysql database
 //create students table
 $sql = "CREATE TABLE students(
         id INT AUTO_INCREMENT PRIMARY KEY,
