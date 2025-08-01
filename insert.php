@@ -19,6 +19,7 @@ if ($conn->query($sql) === FALSE) {
 }
 
 //set variables to insert to table
+//initialize null values to prevent error
 $fullName = $_POST['fullName'] ?? "";
 $birthDate = $_POST['dateOfBirth'] ?? "";
 $gender = $_POST['gender'] ?? "";
@@ -33,11 +34,11 @@ $sql = "INSERT INTO students
 (full_name, dob, gender, course, year_level, contact_number, email)
 VALUES ('$fullName', '$birthDate', '$gender', '$course', '$yearLevel', '$contactNumber', '$email')";
 
-if($conn->query($sql) === TRUE){
+if($conn->query($sql) === TRUE){//add confirmation dialog message
         echo '<script language="javascript">';
         echo 'alert("Student Admission Successful.")';
         echo '</script>';
-}else{
+}else{ //message if something fails
         echo '<script language = "javascript">';
         echo 'alert("Error. Please try again.")';
         echo '</script>';
