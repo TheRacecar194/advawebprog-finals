@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 include 'db_connect.php'; //establishes connection to mysql database
 //create students table
 $sql = "CREATE TABLE students(
@@ -13,5 +13,5 @@ $sql = "CREATE TABLE students(
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )";
 
-$conn->close(); //close connection
-?>
+$conn->close(); //closes db connection
+?> -->
