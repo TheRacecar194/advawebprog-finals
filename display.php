@@ -7,14 +7,7 @@ $result = $conn->query($sql);
 
 //display all data in loop
 while($row = $result->fetch_assoc()){
-    echo "Student ID: {$row['id']}
-     - Full Name: {$row['full_name']}
-     - Date of Birth: {$row['dob']}
-     - Gender: {$row['gender']}
-     - Course: {$row['full_name']}
-     - Year Level: {$row['full_name']}
-     - Contact No.: {$row['full_name']}
-     - Email: {$row['full_name']}";
+    echo "Student ID: {$row['id']} - Full Name: {$row['full_name']} - Date of Birth: {$row['dob']} - Gender: {$row['gender']} - Course: {$row['course']} - Year Level: {$row['year_level']} - Contact No.: {$row['contact_number']} - Email: {$row['email']}";
 }
 $conn->close(); //closes db connection
 ?>
