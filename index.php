@@ -15,7 +15,7 @@ $email = $_POST['email'];
 //insert to table
 $sql = "INSERT INTO students 
         (full_name, dob, gender, course, year_level, contact_number, email) 
-        VALUES ('$fullName', '$birthDate', '$gender', '$course', '$yearLevel', '$contactNumber', $email)"
+        VALUES ('$fullName', '$birthDate', '$gender', '$course', '$yearLevel', '$contactNumber', $email)";
 
 if($conn->query($sql) === TRUE){
         echo '<script language="javascript">';
