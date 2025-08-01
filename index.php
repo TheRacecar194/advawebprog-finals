@@ -1,6 +1,6 @@
 <?php
 include 'db_connect.php' //establishes connection to mysql database
-include 'create_table.php' //potential safeguard for table creation - in case table creation does not happen in linked file.
+//include 'create_table.php' //potential safeguard for table creation - in case table creation does not happen in linked file.
 
 
 //set variables to insert to table
