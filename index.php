@@ -34,13 +34,13 @@ $sql = "INSERT INTO students
 VALUES ('$fullName', '$birthDate', '$gender', '$course', '$yearLevel', '$contactNumber', '$email')";
 
 if($conn->query($sql) === TRUE){
-        // echo "<script language="javascript">";
-        // echo "alert("Student Admission Successful.")";
-        // echo "</script>";
+        echo '<script language="javascript">';
+        echo 'alert("Student Admission Successful.")';
+        echo '</script>';
 }else{
-        echo "<script language = "javascript">";
-        echo "alert("Error. Please try again.")";
-        echo "</script>";
+        echo '<script language = "javascript">';
+        echo 'alert("Error. Please try again.")';
+        echo '</script>';
 }
 
 $conn->close(); //closes db connection
