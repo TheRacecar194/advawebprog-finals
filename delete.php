@@ -1,7 +1,23 @@
 <?php
-include 'db_connect'; //establish connection to db
+include 'db_connect.php'; // connect to DB
 
-//insert delete sql here
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
+    $student_id = $_POST['id'];
 
-$conn->close(); //closes db connection
+    $sql = "DELETE FROM students WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $student_id); 
+
+    if ($stmt->execute()) {
+        echo "Student ID $student_id deleted successfully.";
+    } else {
+        echo "Error deleting student: " . $stmt->error;
+    }
+
+    $stmt->close();
+} else {
+    echo "Invalid";
+}
+
+$conn->close();
 ?>
