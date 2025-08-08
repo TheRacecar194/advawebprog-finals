@@ -35,11 +35,11 @@ $sql = "INSERT INTO students
 VALUES ('$fullName', '$birthDate', '$gender', '$course', '$yearLevel', '$contactNumber', '$email')";
 
 if($conn->query($sql) === TRUE){//add confirmation dialog message
-        echo '<script language="javascript">';
+        echo '<script>';
         echo 'alert("Student Admission Successful.")';
         echo '</script>';
 }else{ //message if something fails
-        echo '<script language = "javascript">';
+        echo '<script>';
         echo 'alert("Error. Please try again.")';
         echo '</script>';
 }
